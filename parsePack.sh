@@ -35,8 +35,10 @@ if [[ ! -d mods ]]; then
 	cd ..
 fi
 
-# fetch forge
+# check the modloader
 modloader="$(cat manifest.json | jq -r '.minecraft | "\(.version),\(.modLoaders[] | select(.primary == true).id)"' | head -n1)"
+
+# fetch forge
 if [[ $modloader == *"forge"* ]]; then
 	mc=${modloader/,*/}
 	forge=${modloader/*,forge-/}
@@ -49,6 +51,15 @@ if [[ $modloader == *"forge"* ]]; then
 		curl -L -O "https://maven.minecraftforge.net/net/minecraftforge/forge/$mc-$forge-$mc/forge-$mc-$forge-$mc-installer.jar"
 		java -jar "forge-$mc-$forge-$mc-installer.jar"
 	fi
+# fetch fabric
+elif [[ $modloader == *"fabric"* ]]; then
+    fabric="${modloader#*-}"
+    mc=${modloader/,*/}
+
+    curl -L -O "https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.11.0/fabric-installer-0.11.0.jar"
+    java -jar "fabric-installer-0.11.0.jar" client -mcversion $mc -loader $fabric -dir `pwd` -noprofile
+fi
+
 else
-	echo "mmmm my attention span is too short for fabric rn"
+    echo "uhhhhhhhh what?"
 fi
