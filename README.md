@@ -24,6 +24,6 @@ works exactly the same:
 8. Profit..?
 
 
-if you want to put it in the default launcher mc launcher cause you think being able to have multiple packs at once is cool, you should stop at step 4. and use my [guide](https://github.com/yav12/stuff/blob/main/howto-defaultmc.md).
+if you want to put it in the default mc launcher cause you think being able to have multiple packs at once is cool, you should stop at step 4. and use my [guide](https://github.com/yav12/stuff/blob/main/howto-defaultmc.md).
 
 :>
