@@ -15,7 +15,7 @@ its pretty much any functional and working linux computer (macos might work too 
 works exactly the same: 
 
 1. Download a ZIP file from curseforge. This is hidden - curse really wants you to use their application. Go to Files -> Main File -> (click on the name) -> `Download` (NOT `Install`) then put it somewhere, like in its own folder
-2. Clone this repository 'git clone https://github.com/yav12/not-curseme.git' in that folder
+2. Clone this repository `git clone https://github.com/yav12/not-curseme.git` in that folder
 3. Get an API key, and place it into the `token` file. You can do this legimately (I'll be here all day, we have time) or use `./getToken.sh` which extracts them from the CurseForge Client
 4. Launch `parsePack.sh`; e.g. `./parsePack.sh "Above and Beyond-1.3.zip"`. This will download all of the mods.
 5. If everything succeeds, a forge installer should pop up after a while. ~~Fabric support is not available at this time~~ Fabric works too (hopefully), and it should download that maybe.
