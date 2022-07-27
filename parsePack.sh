@@ -59,7 +59,6 @@ elif [[ $modloader == *"fabric"* ]]; then
     curl -L -O "https://maven.fabricmc.net/net/fabricmc/fabric-installer/0.11.0/fabric-installer-0.11.0.jar"
     java -jar "fabric-installer-0.11.0.jar" client -mcversion $mc -loader $fabric -dir "~/.minecraft"
 fi
-
-else
+elif [[ $modloader != *"fabric"* || $modloader != *"forge"*]]; then
     echo "uhhhhhhhh what?"
 fi
